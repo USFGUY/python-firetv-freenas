@@ -13,7 +13,7 @@ LABEL org.freenas.autostart="true" \
               \"name\": \"/conf\", \
               \"descr\": \"firetv config\" \
           } \
-      ]"
+      ]" \
       org.freenas.settings="[                                           \
           {                                                             \
               \"env\": \"PGID\",                                        \
