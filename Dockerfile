@@ -10,7 +10,7 @@ LABEL org.freenas.autostart="true" \
       org.freenas.port-mappings="5556:5556/tcp" \
       org.freenas.volumes="[ \
           { \
-              \"name\": \"/conf\", \
+              \"name\": \"/config\", \
               \"descr\": \"firetv config\" \
           } \
       ]" \
@@ -44,10 +44,10 @@ RUN apt-get update && apt-get install -y \
 RUN pip --no-cache-dir install --upgrade pip
 RUN pip --no-cache-dir install flask
 RUN pip --no-cache-dir install https://pypi.python.org/packages/source/M/M2Crypto/M2Crypto-0.24.0.tar.gz
-RUN pip install /tmp/python-firetv-master[firetv-server] --process-dependency-links
+RUN pip install /tmp/python-firetv-master[firetv-server]
 
 EXPOSE 5556
 
-VOLUME /conf
+VOLUME /config
 
 CMD ["firetv-server", "-c", "/config/devices.yaml"]
