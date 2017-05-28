@@ -11,20 +11,8 @@ LABEL org.freenas.autostart="true" \
       org.freenas.volumes="[ \
           { \
               \"name\": \"/config\", \
-              \"descr\": \"firetv config\" \
+              \"descr\": \"firetv devices.yaml config folder\" \
           } \
-      ]" \
-      org.freenas.settings="[                                           \
-          {                                                             \
-              \"env\": \"PGID\",                                        \
-              \"descr\": \"GroupID\",                                   \
-              \"optional\": true                                        \
-          },                                                            \
-          {                                                             \
-              \"env\": \"PUID\",                                        \
-              \"descr\": \"UserID\",                                    \
-              \"optional\": true                                        \
-         }                                                              \
       ]"
 
 RUN apt-get update && apt-get install -y \

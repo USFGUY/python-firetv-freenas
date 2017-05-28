@@ -2,6 +2,10 @@
 
 `firetv` is a Python 2.x package that provides state information and some control of an Amazon Fire TV device over a network. This is achieved via ADB, so therefore requires [ADB Debugging](https://developer.amazon.com/public/solutions/devices/fire-tv/docs/connecting-adb-over-network) to be turned on. It includes `firetv-server`, an HTTP server to facilitate RESTful access to configured devices.
 
+## FreeNAS dockerfile
+
+To use the FreeNAS docker file, all that needs doing is setting your host config folder location and including a single "devices.yaml" file as detailed below.
+
 ## Installation
 
 Install the following ADB dependencies via your package manager:
